@@ -5,12 +5,20 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <script src="js/jquery-1.7.1.min.js"></script>
     <script src="js/jquery.timers.js"></script>
-    <script src="js/shishunki.js"></script>
+    <script src="js/jquery.shishunki.js"></script>
     <script>
       $(document).ready(function(){
-      (new Shishunki(10,1,'#head')).horizon();
-      (new Shishunki(25,2,'#head2')).horizon();
-      (new Shishunki(5,10,'#head3')).horizon();
+        $('#head').startLineAnime({ lineHeight:10, numOfLines: 5 });
+	$('#head2').startLineAnime();
+        $('#head3').startLineAnime({ lineHeight:2 , numOfLines: 25});
+		$('#head').stopLineAnime();
+		$('#head').restartLineAnime();
+
+
+
+//      (new Shishunki(10,1,'#head')).horizon();
+//      (new Shishunki(25,2,'#head2')).horizon();
+//      (new Shishunki(5,10,'#head3')).horizon();
       });
     </script>
     <style>
