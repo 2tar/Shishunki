@@ -8,9 +8,10 @@
     <script src="js/jquery.shishunki.js"></script>
     <script>
       $(document).ready(function(){
-        $('#head').startLineAnime({ lineHeight:10, numOfLines: 5 });
-	$('#head2').startLineAnime();
-        $('#head3').startLineAnime({ lineHeight:2 , numOfLines: 25});
+        $('#head').startLineAnime({ lineHeight:10, numOfLines: 5});
+	$('#head2').startLineAnime({angle: 'vertical', interval:'random'});
+	$('#head2').startLineAnime({angle: 'horizon', interval:'random'});
+        $('#head3').startLineAnime({ lineHeight:2 , numOfLines: 25, interval:'random'});
 		$('#head').stopLineAnime();
 		$('#head').restartLineAnime();
 
